@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This app makes no network calls of its own beyond local LAN probes it originates for the
+     scanner (plain TCP connect / reachability checks, not HTTP). cleartextTrafficPermitted is
+     scoped off by default; nothing here weakens TLS validation for any destination, and the
+     app never disables certificate checking anywhere in its own code. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

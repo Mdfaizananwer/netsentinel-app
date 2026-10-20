@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base theme; actual Material3 theming is done in Compose (ui/theme/Theme.kt).
+         This XML theme only governs the pre-Compose window background/splash to avoid
+         a white flash before Compose takes over. -->
+    <style name="Theme.NetSentinel" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/cyber_bg</item>
+        <item name="android:statusBarColor">@color/cyber_bg</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/cyber_bg</item>
+    </style>
+</resources>

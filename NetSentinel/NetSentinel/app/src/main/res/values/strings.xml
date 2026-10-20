@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NetSentinel</string>
+    <string name="vpn_capture_notification_title">Packet Capture Lab active</string>
+    <string name="vpn_capture_notification_text">Capturing metadata for traffic routed through NetSentinel\'s local VPN interface.</string>
+</resources>
