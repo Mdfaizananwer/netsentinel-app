@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterial3Api::class)
+
 package com.netsentinel.app.ui.scanner
 
 import androidx.compose.foundation.layout.Arrangement
@@ -9,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
@@ -58,7 +61,7 @@ fun ScannerScreen(app: NetSentinelApp, onBack: () -> Unit) {
                         label = { Text("End IP") }, modifier = Modifier.fillMaxWidth(), enabled = !ui.isScanning,
                     )
                     Text(
-                        "Scans are capped at 1024 hosts and refused outside your detected local subnet. Client isolation, firewalls, VPNs and OS restrictions can hide devices — a clean scan is not a guarantee every device will appear.",
+                        "Scans are capped at 1024 hosts and refused outside your detected local subnet. Client isolation, firewalls, VPNs and OS restrictions can hide devices — a clean scan is not guaranteed. Review the live results and adjust the range if needed.",
                         style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                     ui.errorMessage?.let { Text(it, color = ErrorRed, style = MaterialTheme.typography.bodyMedium) }
